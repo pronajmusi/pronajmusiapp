@@ -13,8 +13,45 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      height: {
+        '95PERC': '95%'
+      },
+      width: {
+        '95PERC': '95%'
+      },
+      maxWidth: {
+        'PAGE_MAX': '2520px'
+      }
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        lightTheme: {
+          "primary": "#4f46e5",
+          "secondary": "#000000",
+          "accent": "#a5b4fc",
+          "neutral": "#818cf8",
+          "base-100": "#ffffff",
+          "info": "#dbeafe",
+          "success": "#86efac",
+          "warning": "#fde68a",
+          "error": "#fca5a5",
+        },
+        darkTheme: {
+          "primary": "#4f46e5",
+          "secondary": "#000000",
+          "accent": "#a5b4fc",
+          "neutral": "#818cf8",
+          "base-100": "#1f2830",
+          "info": "#dbeafe",
+          "success": "#86efac",
+          "warning": "#fde68a",
+          "error": "#fca5a5",
+        }
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 }
 export default config
