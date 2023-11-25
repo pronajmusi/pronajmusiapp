@@ -20,7 +20,8 @@ const config: Config = {
         '95PERC': '95%'
       },
       maxWidth: {
-        'PAGE_MAX': '2520px'
+        'PAGE_MAX': '2520px',
+        '70REM': '70rem'
       }
     },
   },

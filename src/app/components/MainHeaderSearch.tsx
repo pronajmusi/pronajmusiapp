@@ -44,9 +44,9 @@ export default function MainHeaderSearch(){
             <div className="collapse-title font-medium px-4">
                 <div className="flex items-center justify-between">
                 <div>
-                    <span>{queryCategory && queryCategory !== "" ? getCategory(queryCategory as Categories) : ""} /</span>
-                    <span>{queryLocation && queryLocation !== "" ? getLocation(queryLocation as LocationKeys) : ""} /</span>
-                    <span>{queryType && queryType !== "" ? getType(queryType as AdTypes) : ""}</span>
+                    <span>{queryCategory && queryCategory !== "" ? `${getCategory(queryCategory as Categories)} /` : `${getCategory(Categories.ALL as Categories)} /`}</span>
+                    <span className="mx-2">{queryLocation && queryLocation !== "" ? `${getLocation(queryLocation as LocationKeys)} /` : `${getLocation(LocationKeys.ALL as LocationKeys)} /`}</span>
+                    <span>{queryType && queryType !== "" ? `${getType(queryType as AdTypes)}` : `${getType(AdTypes.ALL as AdTypes)}`}</span>
                 </div>
                 <div>
                     <CiSearch size={25} />

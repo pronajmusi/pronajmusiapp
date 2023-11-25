@@ -1,6 +1,7 @@
 import { Ad, getLocation, TimePeriods, getPrice, AdTypes } from "../constants/contants"
 import Image from "next/image"
 import IconCustom from "./IconCustom"
+import Link from "next/link"
 
 export default function AdItem({item}:{item: Ad}){
     return ( 
@@ -30,12 +31,16 @@ export default function AdItem({item}:{item: Ad}){
             </figure>
             <div className="card-body">
                 <div className="card-title">
-                    <h2 className="text-md line-clamp-1 hover:underline cursor-pointer">{item.title}</h2>
+                    <Link href={`/inzeraty/${item.id}`}>
+                        <h2 className="text-md line-clamp-1 hover:underline cursor-pointer">{item.title}</h2>
+                    </Link>
                 </div>
                 <p className="line-clamp-1">{item.description}</p>
                 <div className="card-actions items-center justify-between mt-4">
                     <h2 className="text-sm ml-1 text-neutral-600">{getLocation(item.location)}</h2>
-                    <button className="btn btn-primary text-white btn-sm font-normal">Zjistit více</button>
+                    <Link href={`/inzeraty/${item.id}`}>
+                        <button className="btn btn-primary text-white btn-sm font-normal">Zjistit více</button>
+                    </Link>
                 </div>
             </div>
         </div>

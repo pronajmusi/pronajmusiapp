@@ -4,6 +4,7 @@ import MainLogoSrc from "@/app/assets/images/logo-pro.png"
 import SideNavBar from "./SideNavBar";
 import { HiMiniBars3 } from "react-icons/hi2";
 import MainHeaderSearch from "./MainHeaderSearch";
+import Link from "next/link";
 
 export default function Header(){
     return (
@@ -13,8 +14,10 @@ export default function Header(){
               <label htmlFor="side-nav" className="drawer-button">
                 <HiMiniBars3 size={25} className="mr-2 text-gray-400 hover:text-gray-800 duration-150 cursor-pointer"/>
               </label>
-              <Image alt="Hlavní logo" src={MainLogoSrc} width={30} height={30}/>
-              <span className="text-2xl font-bold ml-2">PronajmuSi</span>
+              <Link href={"/"} className="flex items-center cursor-pointer">
+                <Image alt="Hlavní logo" src={MainLogoSrc} width={30} height={30}/>
+                <span className="text-2xl font-bold ml-2">PronajmuSi</span>
+              </Link>
             </div>
             <div className="hidden md:flex items-center justify-center w-1/3">
               <MainHeaderSearch />
