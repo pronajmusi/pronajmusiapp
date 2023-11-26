@@ -22,6 +22,9 @@ const config: Config = {
       maxWidth: {
         'PAGE_MAX': '2520px',
         '70REM': '70rem'
+      },
+      maxHeight: {
+        '90VH': '90vh'
       }
     },
   },

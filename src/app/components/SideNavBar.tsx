@@ -1,12 +1,27 @@
+import Link from "next/link"
+
 export default function SideNavBar(){
     return (
         <div className="drawer">
             <input id="side-nav" type="checkbox" className="drawer-toggle" />
             <div className="drawer-side">
                 <label htmlFor="side-nav" aria-label="close sidebar" className="drawer-overlay"></label>
-                <nav className="menu p-4 w-80 min-h-full bg-white text-base-content">
-                    <li><a>Sidebar Item 1</a></li>
-                    <li><a>Sidebar Item 2</a></li>
+                <nav className="menu p-4 w-72 md:w-96 min-h-full bg-white text-base-content">
+                    <li>
+                        <Link href={"/"}>Domů</Link>
+                    </li>
+                    <li>
+                        <Link href={"/"}>Přidat inzerát</Link>
+                    </li>
+                    <li>
+                        <Link href={"/info/o-nas"}>O nás</Link>
+                    </li>
+                    <li>
+                        <Link href={"/kontakt"}>Kontakt</Link>
+                    </li>
+                    <li>
+                        <Link href={"/"}>Jak to vlastně funguje ?</Link>
+                    </li>
                 </nav>
             </div>
         </div>

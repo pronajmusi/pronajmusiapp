@@ -6,7 +6,7 @@ export default function ImgViewerModal({ad}: {ad: Ad}){
     const [dimensions, { loading, error }] = useImageSize(ad.img);
     return (
         <dialog id={ad.id} className="modal">
-            <div className="modal-box max-w-70REM">
+            <div className="modal-box max-w-70REM max-h-90VH">
                 <div className="flex">
                     <Image
                         src={ad.img}
