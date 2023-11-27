@@ -11,7 +11,7 @@ export default function Header(){
     return (
         <header className="p-4 px-8 border-b border-b-gray-200 w-full shadow navbar fixed top-0 z-10 bg-white min-h-20">
           <div className="flex items-start justify-between w-full">
-            <div className="flex items-center justify-between md:justify-start w-2/3 md:w-1/3 pt-2">
+            <div className="flex items-center justify-start w-2/3 md:w-1/3 pt-2">
               <label htmlFor="side-nav" className="drawer-button">
                 <HiMiniBars3 size={25} className="mr-2 text-gray-400 hover:text-gray-800 duration-150 cursor-pointer"/>
               </label>

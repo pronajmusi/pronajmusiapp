@@ -20,7 +20,7 @@ export default function SideNavBar(){
                         <Link href={"/kontakt"}>Kontakt</Link>
                     </li>
                     <li>
-                        <Link href={"/"}>Jak to vlastně funguje ?</Link>
+                        <Link href={"/info/jak-to-funguje"}>Jak to vlastně funguje ?</Link>
                     </li>
                 </nav>
             </div>

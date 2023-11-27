@@ -12,14 +12,14 @@ export default async function OfferDetails({params}: {params: Params}) {
     const ad: Ad = await getAdDetails(params.id);
     
     return (
-        <main className="flex min-h-screen justify-start items-center w-full my-4 px-12 flex-col py-24">
-            <div className="w-10/12 flex flex-col">
+        <main className="flex min-h-screen justify-start items-center w-full my-4 md:px-10 px-4 flex-col py-24">
+            <div className="w-11/12 md:w-10/12 flex flex-col">
                 {
                     (ad.img && ad.img !== "") && 
                     <AdImage ad={ad} />
                 }
-                <div className="flex items-center">
-                    <h1 className="font-semibold text-4xl mr-4">{ad.title}</h1>
+                <div className="flex flex-col md:flex-row md:items-center">
+                    <h1 className="font-semibold text-4xl mb-2 md:mb-0 md:mr-4">{ad.title}</h1>
                     <p className="text-slate-500 text-md">&gt; {getType(ad.type)} &gt; {getLocation(ad.location)}</p>
                 </div>
                 {
@@ -43,8 +43,8 @@ export default async function OfferDetails({params}: {params: Params}) {
                 <div className="flex flex-col mt-10">
                     <h1 className="font-semibold text-3xl">Kontakt</h1>
                     <div className="mt-10 bg-white shadow-xl p-6 w-full">
-                        <div className="flex items-center">
-                            <div className="flex items-center mr-14">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                            <div className="flex items-center md:mr-14 mb-2 md:mb-0">
                                 <MdAlternateEmail size={30} />
                                 <a className="text-slate-600 ml-4 hover:underline" href={`mailto:${ad.email}`}>{ad.email}</a>
                             </div>
@@ -56,7 +56,7 @@ export default async function OfferDetails({params}: {params: Params}) {
                     </div>
                 </div>
 
-                <div className="flex flex-col mt-20 mb-10">
+                <div className="flex flex-col mt-20 mb-10 max-w-full overflow-x-auto">
                     <h1 className="font-semibold text-3xl">Podobné inzeraty</h1>
                     <div className="mt-10">
                         <RelatedAds category={ad.category} location={ad.location} type={ad.type} title={ad.title}/>

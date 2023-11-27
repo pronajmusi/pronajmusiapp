@@ -25,6 +25,9 @@ const config: Config = {
       },
       maxHeight: {
         '90VH': '90vh'
+      },
+      minHeight: {
+        '20R': "20rem"
       }
     },
   },
