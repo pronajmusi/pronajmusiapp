@@ -24,7 +24,9 @@ export default function Header(){
               <MainHeaderSearch />
             </div>
             <div className="hidden md:flex items-center justify-end w-1/3 pt-2">
-              <button className="btn btn-secondary btn-sm text-white font-normal">Přidat inzerát</button>
+              <Link href={'/inzeraty/pridat'}>
+                <button className="btn btn-secondary btn-sm text-white font-normal">Přidat inzerát</button>
+              </Link>
               <UserDrop />
             </div>
             <div className="flex md:hidden">

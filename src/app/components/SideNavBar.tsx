@@ -11,7 +11,7 @@ export default function SideNavBar(){
                         <Link href={"/"}>Domů</Link>
                     </li>
                     <li>
-                        <Link href={"/"}>Přidat inzerát</Link>
+                        <Link href={"/inzeraty/pridat"}>Přidat inzerát</Link>
                     </li>
                     <li>
                         <Link href={"/info/o-nas"}>O nás</Link>
