@@ -12,7 +12,7 @@ export default function AddOffer() {
         }
     })
     return (
-        <main className="flex min-h-screen justify-start items-center w-full my-20 px-12 flex-col">
+        <main className="flex min-h-screen justify-start items-center w-full my-10 py-24 px-12 flex-col">
             <AddOfferPage />
         </main>
     )

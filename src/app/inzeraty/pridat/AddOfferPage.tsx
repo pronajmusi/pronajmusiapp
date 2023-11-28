@@ -2,7 +2,7 @@ import AddOptions from './AddOptions';
 
 export default function AddOfferPage() {
     return (
-        <div className="w-9/12 flex flex-col">
+        <div className="w-10/12 flex flex-col">
             <div className="w-full">
                 <h1 className="font-semibold text-4xl">Chci přidat..</h1>
             </div>
