@@ -1,5 +1,5 @@
 import { getAdDetails } from "@/app/lib/ads/getAdDetails"
-import { Ad, getType, getLocation, BackgroundOptions, AdTypes, getPrice, TimePeriods } from "@/app/constants/contants";
+import { Ad, getType, getLocation, AdTypes, getPrice, TimePeriods } from "@/app/constants/contants";
 import { MdAlternateEmail, MdLocalPhone } from "react-icons/md";
 import RelatedAds from "./RelatedAds";
 import AdImage from "@/app/components/AdImage";
@@ -8,9 +8,16 @@ interface Params  {
     id: string
 }
 
+export async function generateMetadata({params}: {params: Params}) {
+    const ad: Ad = await getAdDetails(params.id);
+    return {
+        title: ad.title,
+        description: ad.description
+    }
+}
+
 export default async function OfferDetails({params}: {params: Params}) {
     const ad: Ad = await getAdDetails(params.id);
-    
     return (
         <main className="flex min-h-screen justify-start items-center w-full my-4 md:px-10 px-4 flex-col py-24">
             <div className="w-11/12 md:w-10/12 flex flex-col">

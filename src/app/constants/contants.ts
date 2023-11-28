@@ -374,3 +374,19 @@ export const getUsedParams = (searchParams: ReadonlyURLSearchParams) => {
 
     return params
 }
+
+export enum RouteKeys {
+  HOME = "HOME",
+  HOWITWORKS = "HOWITWORKS"
+}
+
+export const PageMeta = {
+  [RouteKeys.HOME]: {
+    title: "Pronájem Snadno: Poptávky, Nabídky a Stálé Možnosti - PronajmuSi.cz",
+    description: `Pro snadné a spolehlivé pronájmy využijte naší platformu. Přidejte poptávku nebo nabídku a spojte se s kvalitními poskytovateli. Pro dlouhodobé možnosti pronájmu navštivte kategorii Stálé nabídky. Na PronajmuSi.cz propojujeme poptávky a nabídky, usnadňujeme vám hledání a nabízení potřebných služeb a věcí.`
+  },
+  [RouteKeys.HOWITWORKS]: {
+    title: "Jak To Funguje: Snadný Pronájem na PronajmuSi.cz",
+    description: `Přečtěte si, jak snadno a rychle můžete pronajmout nebo nabídnout služby a věci na PronajmuSi.cz. Přidávejte poptávky a nabídky, spojujeme vás s spolehlivými poskytovateli. Pro dlouhodobé možnosti navštivte kategorii Stálé nabídky. Jednoduché propojení poptávek a nabídek pro usnadnění vašeho pronájmu.`
+  },
+}
