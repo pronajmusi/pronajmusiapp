@@ -1,4 +1,7 @@
 import AddOptions from './AddOptions';
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.ADDAD];
 
 export default function AddOfferPage() {
     return (

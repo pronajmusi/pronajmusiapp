@@ -1,4 +1,7 @@
 import AddDemandForm from "./AddDemandForm";
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.DEMAND];
 
 export default function AddDemand() {
     return (

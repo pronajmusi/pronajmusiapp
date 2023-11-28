@@ -1,4 +1,7 @@
 import RegisterForm from './RegisterForm';
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.REGISTER];
 
 export default function RegisterPage() {
     return (

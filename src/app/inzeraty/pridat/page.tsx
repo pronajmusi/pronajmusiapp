@@ -1,21 +1,12 @@
-'use client'
+import AddPageSessionWrapper from "./AddPageSessionWrapper";
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
 
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
-import AddOfferPage from './AddOfferPage';
+export const metadata = PageMeta[RouteKeys.ADDAD];
 
 export default function AddOffer() {
-    const session = useSession({
-        required: true,
-        onUnauthenticated() {
-            redirect("/profil/prihlasit-se")
-        }
-    })
     return (
         <main className="flex min-h-screen justify-start items-center w-full my-10 py-24 px-12 flex-col">
-            <AddOfferPage />
+            <AddPageSessionWrapper />
         </main>
     )
 }
-
-AddOffer.requireAuth = true;

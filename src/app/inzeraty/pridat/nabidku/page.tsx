@@ -1,4 +1,7 @@
 import AddOfferForm from "./AddOfferForm"
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.OFFER];
 
 export default function AddOffer() {
     return (

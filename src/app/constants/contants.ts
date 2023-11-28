@@ -377,7 +377,13 @@ export const getUsedParams = (searchParams: ReadonlyURLSearchParams) => {
 
 export enum RouteKeys {
   HOME = "HOME",
-  HOWITWORKS = "HOWITWORKS"
+  HOWITWORKS = "HOWITWORKS",
+  ADDAD = "ADDAD",
+  DEMAND = "DEMAND",
+  OFFER = "OFFER",
+  SHOP = "SHOP",
+  LOGIN = "LOGIN",
+  REGISTER = "REGISTER"
 }
 
 export const PageMeta = {
@@ -388,5 +394,29 @@ export const PageMeta = {
   [RouteKeys.HOWITWORKS]: {
     title: "Jak To Funguje: Snadný Pronájem na PronajmuSi.cz",
     description: `Přečtěte si, jak snadno a rychle můžete pronajmout nebo nabídnout služby a věci na PronajmuSi.cz. Přidávejte poptávky a nabídky, spojujeme vás s spolehlivými poskytovateli. Pro dlouhodobé možnosti navštivte kategorii Stálé nabídky. Jednoduché propojení poptávek a nabídek pro usnadnění vašeho pronájmu.`
+  },
+  [RouteKeys.ADDAD]: {
+    title: "Přidat Inzerát: Nová Poptávka, Nabídka nebo Stálá Nabídka",
+    description: `Vytvořte snadno nový inzerát na PronajmuSi.cz. Přidávejte poptávky, nabídky nebo stálé nabídky a propojte se s lidmi, kteří hledají právě to, co nabízíte.`
+  },
+  [RouteKeys.OFFER]: {
+    title: "Přidat Nabídku: Nová Možnost Pronájmu na PronajmuSi.cz",
+    description: `Přidejte novou nabídku na PronajmuSi.cz a propojte se s lidmi, kteří hledají právě to, co nabízíte. Snadno a rychle najděte odpovídající poptávky od spolehlivých zájemců.`
+  },
+  [RouteKeys.DEMAND]: {
+    title: "Přidat Poptávku: Hledám na PronajmuSi.cz",
+    description: `Vytvořte novou poptávku na PronajmuSi.cz a najděte ideální nabídky od spolehlivých poskytovatelů. Jednoduše a rychle spojte se s lidmi, kteří nabízejí to, co potřebujete.`
+  },
+  [RouteKeys.SHOP]: {
+    title: "Přidat Stálou Nabídku: Dlouhodobé Možnosti Pronájmu",
+    description: `Nabízíte dlouhodobé možnosti pronájmu? Přidejte svou stálou nabídku na PronajmuSi.cz a propojte se s těmi, kteří hledají stabilní a dlouhodobá řešení pro pronájem.`
+  },
+  [RouteKeys.LOGIN]: {
+    title: "Přihlášení na PronajmuSi.cz: Spravujte Své Inzeráty Snadno",
+    description: `Přihlaste se na PronajmuSi.cz a získejte kontrolu nad svými inzeráty. Snadno spravujte své poptávky, nabídky a stálé nabídky pro pohodlný pronájem.`
+  },
+  [RouteKeys.REGISTER]: {
+    title: "Registrace na PronajmuSi.cz: Získejte Přístup k Novým Pronájmům",
+    description: `Zaregistrujte se na PronajmuSi.cz a získejte přístup k novým pronájmům. Přidejte své poptávky, nabídky nebo stálé nabídky a zapojte se do naší komunity pro snadný pronájem.`
   },
 }

@@ -1,4 +1,7 @@
 import AddShopForm from "./AddShopForm"
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.SHOP];
 
 export default function AddShop() {
     return (

@@ -1,4 +1,7 @@
 import LoginForm from "./LoginForm";
+import { PageMeta, RouteKeys } from "@/app/constants/contants";
+
+export const metadata = PageMeta[RouteKeys.LOGIN];
 
 export default function LoginPage() {
     return (

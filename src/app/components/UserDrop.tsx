@@ -1,4 +1,5 @@
 import { FaUser } from "react-icons/fa"
+import Link from "next/link"
 
 export default function UserDrop(){
     return (
@@ -10,9 +11,9 @@ export default function UserDrop(){
             </label>
             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow border menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                 <li>
-                    <a className="justify-between">
+                    <Link href={'/profil'}>
                         Profile
-                    </a>
+                    </Link>
                 </li>
                 <li><a>Settings</a></li>
                 <li><a>Logout</a></li>
