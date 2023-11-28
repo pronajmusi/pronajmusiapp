@@ -383,7 +383,8 @@ export enum RouteKeys {
   OFFER = "OFFER",
   SHOP = "SHOP",
   LOGIN = "LOGIN",
-  REGISTER = "REGISTER"
+  REGISTER = "REGISTER",
+  ABOUT = "ABOUT"
 }
 
 export const PageMeta = {
@@ -418,5 +419,9 @@ export const PageMeta = {
   [RouteKeys.REGISTER]: {
     title: "Registrace na PronajmuSi.cz: Získejte Přístup k Novým Pronájmům",
     description: `Zaregistrujte se na PronajmuSi.cz a získejte přístup k novým pronájmům. Přidejte své poptávky, nabídky nebo stálé nabídky a zapojte se do naší komunity pro snadný pronájem.`
+  },
+  [RouteKeys.ABOUT]: {
+    title: "O Nás - PronajmuSi.cz: Propojení Pro Efektivní a Snadné Pronájmy",
+    description: `Prozkoumejte náš příběh a cíle na stránce 'O Nás'. Jsme PronajmuSi.cz, váš partner pro spolehlivé a efektivní pronájmy. Zjistěte, jak naše platforma propojuje lidi a usnadňuje správu poptávek, nabídek a stálých možností pronájmu. Připojte se k nám a objevte nové příležitosti pro pronájem na PronajmuSi.cz.`
   },
 }
