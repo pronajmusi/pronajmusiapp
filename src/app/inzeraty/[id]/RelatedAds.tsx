@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { getRelatedAds } from '@/app/lib/ads/getRelatedAds';
 import { Categories, LocationKeys, AdTypes, Ad } from "@/app/constants/contants";
 import AdItem from '@/app/components/AdItem';
+import AdSlider from '@/app/components/AdSlider';
 
 export default function RelatedAds({
     category,
@@ -39,11 +40,14 @@ export default function RelatedAds({
 
     return (
         <div className="w-full flex items-center">
-            {relatedAds.map((ad) => (
-                <div className='mx-1' key={ad.id}>
-                    <AdItem item={ad} />
-                </div>
-            ))}
+            {
+                loading && 
+                <div>123</div>
+            }
+            {
+                !loading && 
+                <AdSlider items={relatedAds} />
+            }
         </div>
     )
 }

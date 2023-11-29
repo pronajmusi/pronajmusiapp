@@ -8,5 +8,10 @@ export const useUserStore = create((set) => ({
     },
     setAds: (ads: any) =>{
         set({ userAds: ads });
-    }
+    },
+    deleteAd: (id: string) => {
+        set((state: any) => ({
+            userAds: state.userAds.filter((ad: any) => ad.id !== id),
+        }));
+    },
 }))

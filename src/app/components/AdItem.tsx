@@ -2,8 +2,9 @@ import { Ad, getLocation, TimePeriods, getPrice, AdTypes } from "../constants/co
 import Image from "next/image"
 import IconCustom from "./IconCustom"
 import Link from "next/link"
+import DeleteAdIcon from "./DeleteAdIcon"
 
-export default function AdItem({item}:{item: Ad}){
+export default function AdItem({item, isUserAd}:{item: Ad, isUserAd: boolean}){
     return ( 
         <div className="card w-95PERC h-95PERC bg-base-100 shadow hover:shadow-xl duration-150 border">
             <figure className="border h-72 flex relative">
@@ -28,6 +29,12 @@ export default function AdItem({item}:{item: Ad}){
                         <div className="p-1 px-2 bg-secondary text-sm text-center rounded shadow shadow-gray-500 text-white">{getPrice(item.price as number, item.period as TimePeriods)}</div>
                     }
                 </div>
+                {
+                    isUserAd && 
+                    <div className="absolute right-0 top-0 p-1">
+                        <DeleteAdIcon id={item.id} />
+                    </div>
+                }
             </figure>
             <div className="card-body">
                 <div className="card-title">

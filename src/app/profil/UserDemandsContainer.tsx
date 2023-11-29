@@ -5,9 +5,11 @@ import AdItem from "../components/AdItem";
 
 const UserDemands = ({ userDemands }: { userDemands: Ad[] }) =>{
     return (
-        <div className="bg-white shadow-xl p-6 w-full min-h-40R max-h-40R overflow-y-auto">
-            {userDemands.map((demand) => (
-                <AdItem item={demand} key={demand.id} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
+            {userDemands.map((ad) => (
+                <div className="flex items-center justify-center" key={ad.id}>
+                    <AdItem item={ad} isUserAd={true}/>
+                </div>
             ))}
         </div>
     )
