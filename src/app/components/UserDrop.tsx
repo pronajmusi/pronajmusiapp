@@ -1,5 +1,5 @@
 import { FaUser } from "react-icons/fa"
-import Link from "next/link"
+import UserDropContent from "./UserDropContent"
 
 export default function UserDrop(){
     return (
@@ -9,15 +9,7 @@ export default function UserDrop(){
                     <FaUser size={20} className="text-black"/>
                 </button>
             </label>
-            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow border menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                <li>
-                    <Link href={'/profil'}>
-                        Profile
-                    </Link>
-                </li>
-                <li><a>Settings</a></li>
-                <li><a>Logout</a></li>
-            </ul>
+            <UserDropContent />
         </div>
     )
 }

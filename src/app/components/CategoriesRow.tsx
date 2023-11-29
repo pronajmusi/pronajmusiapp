@@ -24,7 +24,7 @@ export default function CategoriesRow(){
         if(params.kategorie === cat){
             return "border-indigo-700 text-indigo-700";
         } else {
-            return "border-transparent text-indigo-500";
+            return "border-transparent text-black";
         }
     }
 
