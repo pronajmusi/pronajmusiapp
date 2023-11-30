@@ -5,14 +5,14 @@ import { AddIconKeys } from "../constants/contants";
 
 export default function IconComponent({ iconKey }: any) {
     const iconMapping: Record<AddIconKeys, any> = {
-        [AddIconKeys.LIALIGHTBULB]: <LiaLightbulb size={80} />,
-        [AddIconKeys.AIOUTLINESHOP]: <AiOutlineShop size={80} />,
-        [AddIconKeys.BSTAG]: <BsTag size={80} />,
+        [AddIconKeys.LIALIGHTBULB]: <LiaLightbulb />,
+        [AddIconKeys.AIOUTLINESHOP]: <AiOutlineShop />,
+        [AddIconKeys.BSTAG]: <BsTag />,
     };
 
     const selectedIcon = iconMapping[iconKey as AddIconKeys] || null;
 
     return (
-        <div>{selectedIcon}</div>
+        <div className="text-4xl md:text-8xl">{selectedIcon}</div>
     )
 }

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { getSession, signIn } from "next-auth/react"
 import { useUserStore } from "../../store/User"
 import { getUserAds } from "@/app/lib/user/getUserAds";
+import { FcGoogle } from "react-icons/fc";
+import { FaSquareFacebook, FaApple, FaSquareXTwitter } from "react-icons/fa6";
 
 export default function LoginForm() {
     const logIn = async () => {
@@ -65,6 +67,23 @@ export default function LoginForm() {
             </div>
             <div className="flex flex-col w-full mb-4 mt-16" >
                 <button onClick={() => logIn()} className="text-white  px-8 py-2 cursor-pointer rounded duration-150 btn btn-primary font-normal">Přihlásit se</button>
+            </div>
+            <div className='flex flex-col my-4'>
+                <span className='my-2 text-neutral-600'>Nebo se přihlaste přes</span>
+                <div className='flex items-center justify-around'>
+                    <div className='cursor-pointer p-4 hover:shadow border rounded-lg'>
+                        <FcGoogle className="text-4xl md:text-6xl" />
+                    </div>
+                    <div className='text-blue-700 cursor-pointer p-4 hover:shadow border rounded-lg'>
+                        <FaSquareFacebook className="text-4xl md:text-6xl" />
+                    </div>
+                    <div className='text-gray-600 cursor-pointer p-4 hover:shadow border rounded-lg'>
+                        <FaApple className="text-4xl md:text-6xl"/>
+                    </div>
+                    <div className='cursor-pointer p-4 hover:shadow border rounded-lg'>
+                        <FaSquareXTwitter className="text-4xl md:text-6xl" />
+                    </div>
+                </div>
             </div>
             <div className="flex flex-col w-full mb-4 mt-10" >
                 <p className="text-center text-slate-500">Nemáte ještě účet?</p>

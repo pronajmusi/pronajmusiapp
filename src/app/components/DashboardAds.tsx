@@ -66,10 +66,10 @@ export default function DashboardAds(){
             }
             {
                 (adsData.ads.length === 0 && !loading && !Object.values(usedParams).find(x=>x!=="") && loaded) &&
-                <div className="flex flex-col w-full items-center justify-center mt-40">
+                <div className="flex flex-col w-full items-center justify-center mt-20 md:mt-40">
                     <TbFaceIdError size={120} className="text-primary"/>
-                    <span className="text-primary my-8 text-2xl">Zatím tady nemáme žádné inzeráty, buďte první !</span>
-                    <Link href={"/"}>
+                    <span className="text-primary my-8 text-2xl text-center">Zatím tady nemáme žádné inzeráty, buďte první !</span>
+                    <Link href={"/inzeraty/pridat"}>
                         <button className="btn btn-primary text-white font-normal">Přidat inzerát / poptávku</button>
                     </Link>
                 </div>

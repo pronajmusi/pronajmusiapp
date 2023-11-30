@@ -58,7 +58,7 @@ export default function MainHeaderSearch(){
                     <input onClick={(e) => e.stopPropagation()} value={searchString} onChange={(e) => setSearchString(e.target.value)} type="text" placeholder="Sháním..." className="input input-bordered w-full focus:outline-none focus:ring-indigo-500 focus:ring-1" />
                 </div>
                 <div className="flex items-center mt-2 flex-wrap">
-                    <select onClick={(e) => e.stopPropagation()} value={selectedType} onChange={e => setSelectedType(e.target.value as AdTypes)} className="pl-4 py-2 px-4 rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
+                    <select onClick={(e) => e.stopPropagation()} value={selectedType} onChange={e => setSelectedType(e.target.value as AdTypes)} className="pl-4 py-2 px-4 w-full mb-2 md:mb-0 md:w-fit rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
                         {AdTypesArray.map((location, index) => (
                             <option
                             key={index}
@@ -80,7 +80,7 @@ export default function MainHeaderSearch(){
                             </option>
                         ))}
                     </select>
-                    <select onClick={(e) => e.stopPropagation()} value={selectedLocation} onChange={e => setSelectedLocation(e.target.value as LocationKeys)} className="pl-4 mx-2 py-2 px-4 rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
+                    <select onClick={(e) => e.stopPropagation()} value={selectedLocation} onChange={e => setSelectedLocation(e.target.value as LocationKeys)} className="pl-4 md:mx-2 w-full mb-2 md:mb-0 md:w-fit py-2 px-4 rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
                         {Locations.map((location, index) => (
                             <option
                             key={index}
@@ -102,7 +102,7 @@ export default function MainHeaderSearch(){
                             </option>
                         ))}
                     </select>
-                    <select onClick={(e) => e.stopPropagation()} value={selectedCategory} onChange={e => setSelectedCategory(e.target.value as Categories)} className="pl-4 py-2 px-4 rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
+                    <select onClick={(e) => e.stopPropagation()} value={selectedCategory} onChange={e => setSelectedCategory(e.target.value as Categories)} className="pl-4 py-2 px-4 w-full mb-2 md:mb-0 md:w-fit rounded-md input input-bordered focus:outline-none focus:ring-indigo-500 focus:ring-1 cursor-pointer">
                         {MainCategoriesSelect.map((category, index) => (
                             <option
                             key={index}

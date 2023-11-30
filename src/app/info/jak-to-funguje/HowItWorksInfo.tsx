@@ -11,21 +11,21 @@ export default function HowItWorksInfo(){
         case AdTypes.OFFER:
             if (!offerRef.current) return;
             window.scrollTo({
-                top: offerRef.current.offsetTop,
+                top: offerRef.current.offsetTop - 120,
                 behavior: "smooth",
             });
             break;
         case AdTypes.DEMAND:
             if (!demandRef.current) return;
             window.scrollTo({
-                top: demandRef.current.offsetTop,
+                top: demandRef.current.offsetTop - 120,
                 behavior: "smooth",
             });
             break;
         case AdTypes.SHOP:
             if (!shopRef.current) return;
             window.scrollTo({
-                top: shopRef.current.offsetTop,
+                top: shopRef.current.offsetTop - 120,
                 behavior: "smooth",
             });
             break;
@@ -39,7 +39,7 @@ export default function HowItWorksInfo(){
     const shopRef: any = useRef(null);
     
     return (
-        <div className="w-11/12 md:w-10/12 flex flex-col">
+        <div className="w-11/12 flex flex-col">
             <div className="mb-4 flex flex-col">
                 <h1 className="font-semibold text-3xl">Jak to vlastně funguje ?</h1>
                 <p className="mt-5 text-slate-500">
@@ -53,43 +53,43 @@ export default function HowItWorksInfo(){
                     potřebných služeb a věcí.
                 </p>
             </div>
-            <div className="my-20 flex flex-col md:flex-row items-center">
+            <div className="my-20 flex justify-center items-center w-full">
                 <div
-                    className={`border-2 shadow-xl cursor-pointer px-14 py-20
+                    className={`border-2 shadow-xl cursor-pointer px-12 md:px-14 md:py-20 mx-1
                     border-black bg-white
                     rounded-lg hover:bg-indigo-800 hover:text-white hover:border-indigo-800 
                     duration-150  flex items-center justify-center flex-col
-                    h-80 w-full md:w-1/3 mx-4 mb-4 md:mb-0
+                    h-40 md:h-80 w-1/3 md:mx-4 mb-4 md:mb-0
                     `}
                     onClick={(e) => scrollToView(AdTypes.DEMAND)}
                 >
-                    <IconComponent iconKey={AddIconKeys.LIALIGHTBULB} />
-                    <div className="text-3xl mt-10 text-center">Poptávku</div>
+                    <IconComponent iconKey={AddIconKeys.LIALIGHTBULB}/>
+                    <div className="md:text-3xl md:mt-10 mt-2 text-center">Poptávku</div>
                 </div>
                 <div
-                    className={`border-2 shadow-xl cursor-pointer px-14 py-20
+                    className={`border-2 shadow-xl cursor-pointer px-12 md:px-14 md:py-20 mx-1
                     border-black bg-white
                     rounded-lg hover:bg-indigo-800 hover:text-white hover:border-indigo-800 
                     duration-150  flex items-center justify-center flex-col
-                    h-80 w-full md:w-1/3 mx-4 mb-4 md:mb-0
+                    h-40 md:h-80 w-1/3 md:mx-4 mb-4 md:mb-0
                     `}
                     onClick={(e) => scrollToView(AdTypes.OFFER)}
                 >
                     <IconComponent iconKey={AddIconKeys.BSTAG} />
-                    <div className="text-3xl mt-10 text-center">Nabídku</div>
+                    <div className="md:text-3xl md:mt-10 mt-2 text-center">Nabídku</div>
                 </div>
 
                 <div
-                    className={`border-2 shadow-xl cursor-pointer px-14 py-20
+                    className={`border-2 shadow-xl cursor-pointer px-12 md:px-14 md:py-20 mx-1
                     border-black bg-white
                     rounded-lg hover:bg-indigo-800 hover:text-white hover:border-indigo-800 
                     duration-150  flex items-center justify-center flex-col
-                    h-80 w-full md:w-1/3 mx-4 mb-4 md:mb-0
+                    h-40 md:h-80 w-1/3 md:mx-4 mb-4 md:mb-0
                     `}
                     onClick={(e) => scrollToView(AdTypes.SHOP)}
                 >
                     <IconComponent iconKey={AddIconKeys.AIOUTLINESHOP} />
-                    <div className="text-3xl mt-10 text-cente">Stálou nabídku</div>
+                    <div className="md:text-3xl text-center mt-2 md:mt-10 text-cente">Stálou nabídku</div>
                 </div>
             </div>
             <div className="my-10" ref={demandRef}>

@@ -32,7 +32,7 @@ export default function AdItem({item, isUserAd}:{item: Ad, isUserAd: boolean}){
                 {
                     isUserAd && 
                     <div className="absolute right-0 top-0 p-1">
-                        <DeleteAdIcon id={item.id} />
+                        <DeleteAdIcon id={item.id} url={item.img}/>
                     </div>
                 }
             </figure>

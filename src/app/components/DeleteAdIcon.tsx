@@ -4,8 +4,10 @@ import { createId } from '@paralleldrive/cuid2';
 import { deleteAd } from "../lib/ads/deleteAd";
 import { useUserStore } from "../store/User";
 import Notiflix from 'notiflix';
+import { storage } from "@/app/firebase";
+import { deleteObject, ref } from "firebase/storage";
 
-export default function DeleteAdIcon({id}:{id: string}){
+export default function DeleteAdIcon({id, url}:{id: string, url: string}){
     const showModal = () =>{
         let modal: any = document.getElementById(modalId);
         if(modal){
@@ -15,6 +17,14 @@ export default function DeleteAdIcon({id}:{id: string}){
     const deleteItem = async() => {
         const result = await deleteAd(id);
         if(result && result.result){
+            if(url && url !== ""){
+                const imageRef = ref(storage, url);
+                await deleteObject(imageRef).then(() => {
+                    Notiflix.Notify.success('Obrázek k inzerátu smazán');
+                }).catch((err) =>{
+                    Notiflix.Notify.failure('Nepodařilo se smazat obrázek k inzerátu');
+                })
+            }
             userStore.deleteAd(id);
             Notiflix.Notify.success('Inzerát smazán');
         } else {
