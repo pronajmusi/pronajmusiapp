@@ -6,9 +6,9 @@ export default function ContactForm() {
         e.preventDefault();
 
         let params = {
-        email,
-        title,
-        message
+            email,
+            title,
+            message
         };
 
         return params;
