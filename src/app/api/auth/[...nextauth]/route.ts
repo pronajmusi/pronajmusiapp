@@ -21,12 +21,17 @@ const handler = NextAuth({
                     type: 'password'
                 }
             },
-            async authorize(credentials) {
-                return signInWithEmailAndPassword(auth, credentials?.email || '', credentials?.password || '')
-                    .then(async userCredential => {
-                        return userCredential.user
-                    })
-                    .catch(error => null) as any
+            async authorize(credentials): Promise<any> {
+                try {
+                    const result = await signInWithEmailAndPassword(auth, credentials?.email || '', credentials?.password || '');
+                    if(result.user){
+                        return result.user;
+                    } else {
+                        return null
+                    }
+                } catch (err) {
+                    throw new Error('Next Auth - Authorize: Authentication error');
+                }
             },
         })
     ],
