@@ -10,30 +10,33 @@ import { FaSquareFacebook, FaApple, FaSquareXTwitter } from "react-icons/fa6";
 
 export default function LoginForm() {
     const logIn = async () => {
-        await signIn('credentials', { email, password, redirect: false }).then(async result => {
-        let session: any = await getSession();
-        if (session) {
-            let userId = session.user.uid;
-            if (userId) {
-                let params = {
-                    id: userId,
-                }
-                let userData = await fetch("/api/user/getUser", {
-                    method: "POST",
-                    body: JSON.stringify(params)
-                })
+        const result = await signIn('credentials', { email, password, redirect: false });
+        if(result?.ok){
+            let session: any = await getSession();
+            if (session) {
+                let userId = session.user.uid;
+                if (userId) {
+                    let params = {
+                        id: userId,
+                    }
+                    let userData = await fetch("/api/user/getUser", {
+                        method: "POST",
+                        body: JSON.stringify(params)
+                    })
 
-                if (userData.ok) {
-                    let userDataJson = await userData.json();
-                    if (userDataJson) {
-                        userStore.setUser(userDataJson.data.user);
-                        await getUserAdsStore(userId)
-                        router.push("/profil")
+                    if (userData.ok) {
+                        let userDataJson = await userData.json();
+                        if (userDataJson) {
+                            userStore.setUser(userDataJson.data.user);
+                            await getUserAdsStore(userId)
+                            router.push("/profil")
+                        }
                     }
                 }
             }
+        } else if (result?.error){
+            console.error(result.error);
         }
-        });
     }
 
     const getUserAdsStore = async (userId: any) => {
