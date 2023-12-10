@@ -12,7 +12,7 @@ export default function ContactForm() {
             message,
         };
 
-        Notiflix.Notify.success("Děkujeme za odeslání zprávy!");
+        return Notiflix.Notify.success("Děkujeme za odeslání zprávy!");
     };
     const [email, setEmail] = useState("");
     const [title, setTitle] = useState("");
