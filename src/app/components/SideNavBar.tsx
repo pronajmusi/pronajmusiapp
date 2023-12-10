@@ -34,7 +34,7 @@ export default function SideNavBar() {
                             </Link>
                         </li>
                     </div>
-                    <div className="flex items-center ">
+                    <div className="flex items-center justify-center">
                         <Image
                             alt="Hlavní logo"
                             src={MainLogoSrc}

@@ -64,7 +64,7 @@ export default function UserProfile() {
                     />
                     <button
                         onClick={onChangePasswordClick}
-                        className="text-white bg-black px-4 py-2 cursor-pointer rounded-r hover:bg-indigo-700 duration-150"
+                        className="text-white bg-black px-4 py-2 cursor-pointer rounded hover:bg-indigo-700 duration-150"
                     >
                         Změnit heslo
                     </button>
