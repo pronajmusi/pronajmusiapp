@@ -51,16 +51,26 @@ export default function UserProfile() {
                         onChange={onImageChange}
                         hidden
                     />
-                    <div onClick={onProfilePicClick} className="cursor-pointer">
+                    <div
+                        onClick={onProfilePicClick}
+                        className="cursor-pointer flex items-center justify-center flex-col me-1"
+                    >
                         {profileImage ? (
                             <img
                                 src={profileImage}
                                 alt="Profilová fotka"
-                                className="rounded-full border h-24 w-24"
+                                className="rounded-full border h-24 w-24 "
                             />
                         ) : (
-                            <FaUserCircle size={96} className="text-gray-400" />
+                            <FaUserCircle
+                                size={96}
+                                title="Změnit profilovou fotku"
+                                className="text-gray-400"
+                            />
                         )}
+                        <label className="text-sm ">
+                            Změnit profilovou fotku
+                        </label>
                     </div>
                 </div>
                 <div className="flex-1 mb-6 md:mb-0">
